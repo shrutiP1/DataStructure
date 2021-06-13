@@ -2,8 +2,19 @@ package com.bridgeLab.datastructure;
 
 public class MyNode<K>
 {
-    public static void main(String[] args)
-    {
-        System.out.println("Welcome");
+    private K key;
+    private MyNode<K> next;
+
+    public MyNode(K key) {
+        this.key = null;
+        this.next = null;
+    }
+
+    public void setNext(MyNode<K> next) {
+        this.next = next;
+    }
+
+    public MyNode<K> getNext() {
+        return next;
     }
 }
