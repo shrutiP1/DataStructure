@@ -20,4 +20,20 @@ public class LinkedListTest
                 list.tail.equals(myFirstNode);
         Assertions.assertTrue(result);
     }
+    @Test
+    void given3NumbersWhenAppendedPassesLinkedListTest() {
+        MyNode<Integer> myFirstNode = new MyNode<> (56);
+        MyNode<Integer> mySecondNode = new MyNode<> (30);
+        MyNode<Integer> myThirdNode = new MyNode<> (70);
+        LinkedList list = new LinkedList();
+        list.append(myFirstNode);
+        list.append(mySecondNode);
+        list.append(myThirdNode);
+        System.out.print("When Appended the ");
+        list.printList();
+        boolean result = list.head.equals(myFirstNode) &&
+                list.head.getNext().equals(mySecondNode) &&
+                list.tail.equals(myThirdNode);
+        Assertions.assertTrue(result);
+    }
 }
