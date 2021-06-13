@@ -16,6 +16,21 @@ public class Stack<K>
         System.out.println("The Element after peeking is: " + linkedList.head.getKey());
         return linkedList.head;
     }
+    public LNode<K> pop() {
+        return linkedList.popHead();
+    }
+
+    public void size() {
+        linkedList.getSize();
+    }
+    public boolean isEmpty() {
+        if (linkedList.head != null && linkedList.tail != null) {
+            System.out.println("The Stack is Not Empty!!");
+            return false;
+        }
+        System.out.println("The Stack is Empty!!");
+        return true;
+    }
 
     public void printStack() {
         linkedList.printList();
