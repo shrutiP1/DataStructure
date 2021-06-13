@@ -52,6 +52,18 @@ public class LinkedList<K>
         tempNode.setNext(null);
         return tempNode;
     }
+    public LNode searchList(K key) {
+        LNode tempNode = head;
+        while(tempNode != null) {
+            if(tempNode.getKey().equals(key)){
+                System.out.println( "Found Successfully!!\nThe Searched Value is: " + key);
+                return tempNode;
+            }
+            tempNode = tempNode.getNext();
+        }
+        return null;
+    }
+
 
     public void printList() {
         StringBuilder viewList = new StringBuilder("Values are: ");
